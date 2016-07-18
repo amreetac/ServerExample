@@ -13,14 +13,14 @@ function handleBadNews(request, response) {
 
 }
 
-var goodNewsServer = http.createServer(handleRequest);   //connecting to a server, to a port
+var goodNewsServer = http.createServer(handleGoodNews);   //connecting to a server, to a port
 
-var badNewsServer = http.createServer(handleRequest);
+var badNewsServer = http.createServer(handleBadNews);
 
 goodNewsServer.listen(goodNews, function(){
 	console.log("Server listening on: http://localhost:%s", goodNews);
 });
 
-goodNewsServer.listen(badNews, function(){
+badNewsServer.listen(badNews, function(){
 	console.log("Server listening on: http://localhost:%s", badNews);
 });
