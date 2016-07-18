@@ -5,11 +5,12 @@ var goodNews = 7000;
 var badNews = 7500;
 
 function handleGoodNews(request, response) {
-	response.end('Good News! Path Hit: ' + request.url);
+	response.end("You're a Javascript God!");
 
 }
+
 function handleBadNews(request, response) {
-	response.end('Bad News! Path Hit: ' + request.url);
+	response.end("You smell.");
 
 }
 
